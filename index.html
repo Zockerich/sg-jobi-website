@@ -4,161 +4,127 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SG Johannesbrunn/Binabiburg</title>
-  <meta name="description" content="Fußball in Johannesbrunn und Binabiburg: Ergebnisse, Termine, Berichte und alle Mannschaften der SG.">
+  <meta name="description" content="Informationen über den Sportverein SG Johannesbrunn/Binabiburg: Ergebnisse, Termine, Berichte und alle Mannschaften.">
   <link rel="icon" href="assets/wappen.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 
-  <header class="kopf">
-    <div class="kopf__innen">
-      <a class="marke" href="#" aria-label="SG Johannesbrunn/Binabiburg – Startseite">
-        <img src="assets/wappen.svg" alt="" width="36" height="50">
-        <span class="marke__name">SG Johannesbrunn<span>/</span>Binabiburg</span>
+  <div class="seite">
+    <header class="kopf">
+      <a class="kopf__wappen" href="#" aria-label="Startseite">
+        <img src="assets/wappen.svg" alt="Wappen SG Johannesbrunn/Binabiburg" width="72" height="99">
       </a>
-      <button class="menue-knopf" aria-expanded="false" aria-controls="hauptnav">Menü</button>
-      <nav id="hauptnav" class="nav" aria-label="Hauptnavigation">
-        <a href="#mannschaften">Mannschaften</a>
-        <a href="#termine">Termine</a>
-        <a href="#berichte">Berichte</a>
-        <a href="#videos">Videos</a>
-        <a href="#verein">Verein</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="inhalt">
-    <!-- Anzeigetafel: das Herzstück -->
-    <section class="tafel" aria-labelledby="tafel-titel">
-      <div class="tafel__innen">
-        <div class="tafel__kopf">
-          <h1 id="tafel-titel">Letzter Spieltag</h1>
-          <p class="tafel__datum" data-feld="spieltag"></p>
-        </div>
-        <ol class="tafel__liste" data-liste="ergebnisse"></ol>
-        <p class="tafel__fuss">Alle Spiele und Tabellen <a href="https://www.bfv.de/vereine/00ES8GNHVS000016VV0AG08LVUPGND5I">beim BFV</a></p>
+      <div class="kopf__titel">
+        <p class="kopf__name">SG Johannesbrunn/Binabiburg</p>
+        <p class="kopf__zeile">Sportverein, gegründet 1998</p>
       </div>
-    </section>
-
-    <!-- Diese Woche -->
-    <section id="termine" class="block woche" aria-labelledby="woche-titel">
-      <div class="block__kopf">
-        <h2 id="woche-titel">Diese Woche</h2>
-        <button class="knopf knopf--rand" data-oeffnet="abo">Kalender abonnieren</button>
+      <div class="kopf__social" aria-label="Soziale Medien">
+        <a href="https://www.youtube.com/@JobiSG/playlists" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15V9l5.7 3-5.7 3Z"/></svg></a>
+        <a href="https://www.instagram.com/sgjohannesbrunnbinabiburg/" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM21.9 8c-.1-1.6-.4-3-1.6-4.3S17.6 2.2 16 2.1C14.3 2 9.7 2 8 2.1c-1.6.1-3 .4-4.3 1.6S2.2 6.4 2.1 8C2 9.7 2 14.3 2.1 16c.1 1.6.4 3 1.6 4.3s2.7 1.5 4.3 1.6c1.7.1 6.3.1 8 0 1.6-.1 3-.4 4.3-1.6s1.5-2.7 1.6-4.3c.1-1.7.1-6.3 0-8Zm-2.1 9.9a3.3 3.3 0 0 1-1.8 1.8c-1.3.5-4.3.4-5.7.4s-4.4.1-5.7-.4a3.3 3.3 0 0 1-1.8-1.8c-.5-1.3-.4-4.3-.4-5.7s-.1-4.4.4-5.7a3.3 3.3 0 0 1 1.8-1.8c1.3-.5 4.3-.4 5.7-.4s4.4-.1 5.7.4a3.3 3.3 0 0 1 1.8 1.8c.5 1.3.4 4.3.4 5.7s.1 4.4-.4 5.7Z"/></svg></a>
+        <a href="https://www.facebook.com/SGJoBi" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg></a>
       </div>
+      <button class="menue-knopf" aria-expanded="false" aria-controls="menue">Menü</button>
+    </header>
 
-      <div class="woche__raster">
-        <div>
-          <div class="filter" role="group" aria-label="Termine filtern">
-            <button class="filter__chip" aria-pressed="true" data-filter="alle">Alle</button>
-            <button class="filter__chip" aria-pressed="false" data-filter="spiel">Spiele</button>
-            <button class="filter__chip" aria-pressed="false" data-filter="training">Training</button>
-          </div>
-          <div class="agenda" data-liste="termine"></div>
+    <div class="raster">
+      <!-- Linke Spalte: Menü wie bisher -->
+      <aside class="links">
+        <nav id="menue" class="menue" aria-label="Hauptmenü">
+          <a class="menue__punkt aktiv" href="#">Home</a>
+          <div data-menue="Mannschaften"></div>
+          <a class="menue__punkt" href="#termine">Terminkalender</a>
+          <a class="menue__punkt" href="#">Kontakt</a>
+          <a class="menue__punkt" href="#">Email</a>
+          <div data-menue="Archiv"></div>
+          <div data-menue="Service"></div>
+        </nav>
+        <a class="shop" href="#">
+          <img src="assets/wappen.svg" alt="" width="28" height="38">
+          <span>Unser<br>Vereinsshop</span>
+        </a>
+      </aside>
+
+      <!-- Mitte -->
+      <main id="inhalt" class="mitte">
+        <div class="mitte__leiste">
+          <a href="#">Stadionzeitung</a>
         </div>
 
-        <aside class="wochenende" aria-labelledby="we-titel">
-          <h3 id="we-titel">Samstag, 03.10.</h3>
-          <ul data-liste="wochenende"></ul>
-          <div class="events">
-            <h3>Im Verein</h3>
-            <ul data-liste="veranstaltungen"></ul>
-          </div>
-        </aside>
-      </div>
-    </section>
+        <section class="o-erg" aria-labelledby="erg-titel">
+          <h2 id="erg-titel" class="abschnitt">Letzter Spieltag</h2>
+          <ul class="ergebnisse" data-liste="ergebnisse"></ul>
+          <nav class="teamleiste" aria-label="Mannschaften" data-liste="teamKurz"></nav>
+        </section>
 
-    <!-- Berichte + Videos -->
-    <section id="berichte" class="block" aria-labelledby="berichte-titel">
-      <div class="block__kopf">
-        <h2 id="berichte-titel">Aus den Mannschaften</h2>
-        <a class="textlink" href="#">Alle Berichte</a>
-      </div>
-      <div class="berichte">
         <article class="bericht" data-feld="bericht"></article>
-        <div id="videos" class="videos">
-          <h3>Spielvideos</h3>
-          <ul data-liste="videos"></ul>
-          <a class="textlink" href="https://www.youtube.com/@JobiSG/playlists">Alle Videos auf YouTube</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- Mannschaften -->
-    <section id="mannschaften" class="block" aria-labelledby="teams-titel">
-      <div class="block__kopf">
-        <h2 id="teams-titel">Mannschaften</h2>
-        <p class="block__hinweis">Saison 2026/27</p>
-      </div>
-      <div class="teams">
-        <ul class="teams__herren" data-liste="herren"></ul>
-        <div class="teams__rest">
-          <div>
-            <h3>Junioren</h3>
-            <ul class="tags" data-liste="junioren"></ul>
+
+        <section class="spielplan" aria-labelledby="spielplan-titel">
+          <div class="spielplan__kopf">
+            <img src="assets/wappen.svg" alt="" width="32" height="44">
+            <div>
+              <h2 id="spielplan-titel">SG Johannesbrunn-Binabiburg</h2>
+              <p>Nächste Spiele</p>
+            </div>
           </div>
-          <div>
-            <h3>Frauen und Alte Herren</h3>
-            <ul class="tags" data-liste="weitere"></ul>
+          <div data-liste="spiele"></div>
+          <p class="spielplan__fuss">Alle Spiele und Tabellen beim <a href="https://www.bfv.de/vereine/00ES8GNHVS000016VV0AG08LVUPGND5I">BFV</a></p>
+        </section>
+
+        <section id="mannschaften" aria-labelledby="teams-titel">
+          <h2 id="teams-titel" class="abschnitt">Mannschaften <span>Saison 2026/27</span></h2>
+          <ul class="herren" data-liste="herren"></ul>
+          <div class="teams__rest">
+            <div>
+              <h3>Junioren</h3>
+              <ul class="tags" data-liste="junioren"></ul>
+            </div>
+            <div>
+              <h3>Frauen und Alte Herren</h3>
+              <ul class="tags" data-liste="weitere"></ul>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Verein -->
-    <section id="verein" class="block verein" aria-labelledby="verein-titel">
-      <div class="verein__text">
-        <h2 id="verein-titel">Zwei Dörfer, ein Verein</h2>
-        <p>Die SG Johannesbrunn/Binabiburg ist 1998 auf Initiative des SV Johannesbrunn und der DJK Binabiburg entstanden. Heute spielen bei uns drei Herrenmannschaften, über ein Dutzend Juniorenteams, Frauen und Alte Herren.</p>
-        <div class="verein__links">
-          <a class="knopf" href="#">Mitglied werden</a>
-          <a class="textlink" href="#">Formulare und Downloads</a>
-        </div>
-      </div>
-      <div class="kunstrasen">
-        <h3>Kunstrasenplatz Johannesbrunn mieten</h3>
-        <p>Gastvereine können den Platz für Training und Spiele buchen. Ansprechpartner ist Michael Danner.</p>
-        <a class="knopf knopf--hell" href="tel:+4917647014688">0176 47014688 anrufen</a>
-      </div>
-    </section>
-  </main>
+        <section class="willkommen">
+          <h2>Herzlich willkommen!</h2>
+          <p>Hier erfahren Sie Aktuelles zum Verein SG Johannesbrunn/Binabiburg, der im Jahr 1998 auf Initiative der Vereine SV Johannesbrunn und DJK Binabiburg entstanden ist. Zu den Motiven der Gründung des Vereins können Sie <a href="#">hier</a> nachlesen.</p>
+          <p>Die vorliegenden Seiten informieren Sie über die Seniorenmannschaften und über alle Junioren- und Damen-/Mädchen-Mannschaften der SG sowie über die Alten Herren; auch zu den vergangenen Jahren können Sie hier Informationen nachlesen (s. Archiv). Unter Kontakt finden Sie alle wichtigen Ansprechpartner des Vereins.</p>
+          <p>Ein herzliches Dankeschön geht an alle Personen, die mit Fotos, Videos, Artikeln, Informationen etc. zum Inhalt dieser Homepage beitragen!</p>
+        </section>
+      </main>
 
-  <footer id="kontakt" class="fuss">
-    <div class="fuss__innen">
-      <div class="fuss__marke">
-        <img src="assets/wappen.svg" alt="" width="48" height="66">
-        <p>SG Johannesbrunn/Binabiburg<br>gegründet 1998</p>
-      </div>
-      <nav aria-label="Verein">
-        <h3>Verein</h3>
-        <a href="#">Ansprechpartner</a>
-        <a href="#">Mitglied werden</a>
-        <a href="#">Schiedsrichter-Einteilung</a>
-        <a href="#">Hallenplan</a>
-      </nav>
-      <nav aria-label="Stammvereine">
-        <h3>Stammvereine</h3>
-        <a href="https://de-de.facebook.com/SVJohannesbrunn/">SV Johannesbrunn</a>
-        <a href="https://www.djk-binabiburg.de">DJK Binabiburg</a>
-      </nav>
-      <nav aria-label="Soziale Medien">
-        <h3>Folgen</h3>
-        <a href="https://www.instagram.com/sgjohannesbrunnbinabiburg/">Instagram</a>
-        <a href="https://www.facebook.com/SGJoBi">Facebook</a>
-        <a href="https://www.youtube.com/@JobiSG">YouTube</a>
-      </nav>
+      <!-- Rechte Spalte -->
+      <aside class="rechts" aria-label="Service und Termine">
+        <div id="termine" class="kasten">
+          <h2 class="kasten__titel">Termine</h2>
+          <div data-liste="termine"></div>
+          <ul class="legende" data-liste="legende" aria-label="Farben im Kalender"></ul>
+          <button class="abo-knopf" data-oeffnet="abo">Kalender abonnieren</button>
+        </div>
+
+        <div class="kasten links-liste o-links" data-liste="schnelllinks"></div>
+
+        <div class="kasten o-events">
+          <h2 class="kasten__titel">Veranstaltungen</h2>
+          <ul class="termine" data-liste="veranstaltungen"></ul>
+          <a class="mehr" href="#">alle Veranstaltungen</a>
+        </div>
+
+      </aside>
     </div>
-    <div class="fuss__recht">
+
+    <footer class="fuss">
       <a href="#">Impressum</a>
       <a href="#">Datenschutz</a>
       <span>Entwurf, Stand 01.10.2026</span>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <dialog id="abo" class="abo" aria-labelledby="abo-titel">
     <form method="dialog">
@@ -166,7 +132,7 @@
       <p>Wähle deine Mannschaft. Trainings und Spiele erscheinen dann in deinem Handy-Kalender und aktualisieren sich bei jeder Änderung von selbst.</p>
       <ul class="abo__liste" data-liste="abo"></ul>
       <p class="abo__hinweis">In der fertigen Seite steckt hinter jedem Eintrag der Google-Kalender der Mannschaft.</p>
-      <button class="knopf">Schließen</button>
+      <button class="abo-knopf">Schließen</button>
     </form>
   </dialog>
 

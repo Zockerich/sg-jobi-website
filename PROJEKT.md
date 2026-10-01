@@ -6,7 +6,7 @@ Ziel: Die bestehende Seite (sg-johannesbrunn-binabiburg.de, Frameset/PHP) modern
 
 | Schritt | Inhalt | Status |
 |---|---|---|
-| 1 | Design + Startseite mit echten Inhalten | ✅ erster Entwurf (01.10.2026) |
+| 1 | Design + Startseite mit echten Inhalten | ✅ Entwurf 2 (01.10.2026) |
 | 2 | Mannschaftsseiten (eine Vorlage für ~20 Teams, BFV-Widgets) | offen |
 | 3 | Kalender-Demo (Google-Kalender pro Team, Abo), Berichte-, Video-Seite | offen |
 | 4 | Kontakt, Service (Beitritt/Austritt, Formulare, Hallenplan, SR-Einteilung), Impressum, Mobil-Feinschliff | offen |
@@ -21,9 +21,15 @@ Lokal ansehen: `index.html` im Browser öffnen.
 
 ## Design
 
-- Farben aus dem Wappen: Rot `#B5301F`, Marine `#1B2A4A`, Gold `#D4A43A`
-- Schrift: Barlow Condensed (Überschriften, Ergebnisse), Barlow (Text)
-- Herzstück: Anzeigetafel „Letzter Spieltag“ mit SG1–SG3 und Spielvideos
+- Entwurf 1 (modern, Marine/Gold, Anzeigetafel) wurde abgelehnt: „optisch ein Fehltritt“.
+- Entwurf 2 orientiert sich am bisherigen Design:
+  - roter Kopf `#A00000` mit Wappen, „Sportverein, gegründet 1998“, Social-Icons
+  - Menü links im grauen Kasten `#E0E0E0` (Mannschaften/Archiv/Service aufklappbar), Vereinsshop
+  - Mitte: Letzter Spieltag mit Videobildern, Team-Kurzlinks, Juniorenbericht, Spielplan im BFV-Stil, Mannschafts-Kacheln, Willkommenstext
+  - rechts: **Termine direkt neben den Ergebnissen** mit Farbcode nach Ort (Binabiburg, Johannesbrunn, Auswärts, Halle, DJK Vereinsheim, Sonstiges), Schnelllinks, Veranstaltungen
+  - Überschriften Rot `#C00000`, Seitenhintergrund Grau `#A0A0A0`
+- Aus Entwurf 1 behalten (gefiel): Mannschafts-Kacheln SG1–3 + Junioren-Tags
+- Handy: Kalender direkt nach den Ergebnissen
 
 ## Entscheidungen
 
