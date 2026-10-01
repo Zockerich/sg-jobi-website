@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" role="img" aria-label="Wappen SG Johannesbrunn/Binabiburg">
+  <!-- Nachgezeichnetes Platzhalter-Wappen. Vor dem Livegang durch die Originaldatei (sgwappen-neu2.png) ersetzen. -->
+  <path d="M80 2 L156 18 V148 L80 216 L4 148 V18 Z" fill="#D4A43A"/>
+  <path d="M80 7 L151 22 V146 L80 209 L9 146 V22 Z" fill="#1B2A4A"/>
+  <path d="M80 12 L146 26 V143 L80 202 L14 143 V26 Z" fill="#fff"/>
+  <g font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="10.5" fill="#1B2A4A">
+    <text x="47" y="44" text-anchor="middle" transform="rotate(-6 47 44)">JOHANNESBRUNN</text>
+    <text x="113" y="44" text-anchor="middle" transform="rotate(6 113 44)">BINABIBURG</text>
+  </g>
+  <!-- J -->
+  <path d="M24 60 H74 V150 L60 172 L24 140 V110 H44 V128 L52 136 V82 H24 Z" fill="#B5301F" stroke="#D4A43A" stroke-width="2" stroke-linejoin="round"/>
+  <!-- B -->
+  <path d="M86 60 H128 L136 72 V100 L128 110 L138 120 V146 L86 192 Z M108 80 V100 H116 V80 Z M108 120 V150 L118 141 V120 Z" fill="#B5301F" fill-rule="evenodd" stroke="#D4A43A" stroke-width="2" stroke-linejoin="round"/>
+</svg>

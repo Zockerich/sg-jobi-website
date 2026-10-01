@@ -1,0 +1,262 @@
+/* SG Johannesbrunn/Binabiburg – Entwurf Startseite
+   Farben aus dem Wappen: Rot, Marine, Gold */
+:root {
+  --rot: #B5301F;
+  --rot-dunkel: #8E2416;
+  --marine: #1B2A4A;
+  --marine-tief: #121D35;
+  --gold: #D4A43A;
+  --kreide: #FFFFFF;
+  --grund: #F2F3F5;
+  --tinte: #18202F;
+  --grau: #5B6475;
+  --linie: #D9DCE2;
+
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --text: "Barlow", system-ui, sans-serif;
+
+  --breite: 1160px;
+  --rand: clamp(16px, 4vw, 40px);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  font-family: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--tinte);
+  background: var(--grund);
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.05; margin: 0; letter-spacing: .005em; }
+h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
+h3 { font-size: 1.35rem; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+
+.skip { position: absolute; left: -999px; top: 8px; background: var(--kreide); padding: 8px 12px; z-index: 10; }
+.skip:focus { left: 8px; }
+
+/* Knöpfe und Links */
+.knopf {
+  display: inline-flex; align-items: center; gap: .5em;
+  font: 600 1rem/1 var(--text);
+  padding: .8em 1.2em; border-radius: 6px; border: 2px solid var(--rot);
+  background: var(--rot); color: var(--kreide); text-decoration: none; cursor: pointer;
+}
+.knopf:hover { background: var(--rot-dunkel); border-color: var(--rot-dunkel); }
+.knopf--rand { background: transparent; color: var(--rot); }
+.knopf--rand:hover { background: var(--rot); color: var(--kreide); }
+.knopf--hell { background: var(--kreide); border-color: var(--kreide); color: var(--marine); }
+.knopf--hell:hover { background: var(--gold); border-color: var(--gold); color: var(--marine); }
+.textlink { color: var(--rot); font-weight: 600; text-underline-offset: 3px; }
+
+/* Kopf */
+.kopf { background: var(--kreide); border-bottom: 1px solid var(--linie); position: sticky; top: 0; z-index: 5; }
+.kopf__innen { max-width: var(--breite); margin: 0 auto; padding: 10px var(--rand); display: flex; align-items: center; gap: 24px; }
+.marke { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+.marke img { width: 36px; height: auto; }
+.marke__name { font: 700 1.3rem/1 var(--display); color: var(--marine); }
+.marke__name span { color: var(--rot); padding: 0 1px; }
+.nav { display: flex; gap: 4px; }
+.nav a { text-decoration: none; font-weight: 500; padding: 8px 12px; border-radius: 6px; color: var(--tinte); }
+.nav a:hover { background: var(--grund); color: var(--rot); }
+.menue-knopf { display: none; font: 600 1rem var(--text); background: none; border: 2px solid var(--marine); color: var(--marine); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+
+@media (max-width: 860px) {
+  .menue-knopf { display: block; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--kreide); flex-direction: column; padding: 8px var(--rand) 16px; border-bottom: 1px solid var(--linie); }
+  .nav.offen { display: flex; }
+  .nav a { padding: 12px 8px; border-bottom: 1px solid var(--grund); }
+}
+@media (max-width: 400px) { .marke__name { font-size: 1.1rem; } }
+
+/* Anzeigetafel */
+.tafel {
+  background:
+    radial-gradient(circle at 50% 120%, transparent 0 140px, rgba(255,255,255,.06) 141px 143px, transparent 144px),
+    linear-gradient(90deg, transparent calc(50% - 1px), rgba(255,255,255,.06) calc(50% - 1px) calc(50% + 1px), transparent calc(50% + 1px)),
+    var(--marine);
+  color: var(--kreide);
+  border-bottom: 6px solid var(--rot);
+}
+.tafel__innen { max-width: var(--breite); margin: 0 auto; padding: clamp(28px, 5vw, 56px) var(--rand) clamp(24px, 4vw, 40px); }
+.tafel__kopf { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.tafel h1 { font-size: clamp(1.6rem, 3vw, 2rem); color: var(--gold); font-weight: 700; }
+.tafel__datum { color: rgba(255,255,255,.7); }
+
+.tafel__liste { display: grid; gap: 2px; background: rgba(255,255,255,.08); border-radius: 10px; overflow: hidden; }
+.spiel {
+  display: grid;
+  grid-template-columns: 92px 1fr auto 150px;
+  align-items: center; gap: 20px;
+  padding: 18px 24px;
+  background: var(--marine-tief);
+}
+.spiel__team { font: 800 2.4rem/1 var(--display); color: var(--gold); }
+.spiel__paarung { min-width: 0; }
+.spiel__gegner { font: 600 1.35rem/1.2 var(--display); }
+.spiel__liga { font-size: .9rem; color: rgba(255,255,255,.6); }
+.spiel__stand {
+  font: 800 clamp(3rem, 7vw, 4.5rem)/1 var(--display);
+  font-variant-numeric: tabular-nums;
+  display: flex; align-items: center; gap: .15em;
+}
+.spiel__stand i { font-style: normal; color: rgba(255,255,255,.35); font-weight: 600; }
+.spiel__urteil { font-size: .85rem; font-weight: 600; text-align: center; padding: 3px 8px; border-radius: 4px; margin-top: 6px; }
+.spiel--sieg .spiel__urteil { background: var(--gold); color: var(--marine); }
+.spiel--remis .spiel__urteil { background: rgba(255,255,255,.15); color: var(--kreide); }
+.spiel--niederlage .spiel__urteil { background: var(--rot); color: var(--kreide); }
+.spiel__video { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; font-size: .95rem; color: var(--kreide); }
+.spiel__video span.play {
+  flex: none; width: 40px; height: 40px; border-radius: 50%;
+  border: 2px solid var(--gold); display: grid; place-items: center;
+}
+.spiel__video span.play::before { content: ""; border-left: 12px solid var(--gold); border-top: 7px solid transparent; border-bottom: 7px solid transparent; margin-left: 3px; }
+.spiel__video:hover span.play { background: var(--gold); }
+.spiel__video:hover span.play::before { border-left-color: var(--marine); }
+.tafel__fuss { margin-top: 16px; font-size: .95rem; color: rgba(255,255,255,.7); }
+.tafel__fuss a { color: var(--kreide); }
+
+@media (max-width: 720px) {
+  .spiel { grid-template-columns: auto 1fr auto; grid-template-areas: "team paar stand" "video video video"; gap: 6px 16px; padding: 16px; }
+  .spiel__team { grid-area: team; font-size: 1.9rem; }
+  .spiel__paarung { grid-area: paar; }
+  .spiel__ergebnis { grid-area: stand; }
+  .spiel__stand { font-size: 2.6rem; }
+  .spiel__video { grid-area: video; margin-top: 6px; }
+  .spiel__video span.play { width: 30px; height: 30px; }
+}
+
+/* Blöcke */
+.block { max-width: var(--breite); margin: 0 auto; padding: clamp(40px, 6vw, 72px) var(--rand) 0; }
+.block__kopf { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.block__hinweis { color: var(--grau); }
+
+/* Diese Woche */
+.woche__raster { display: grid; grid-template-columns: 1.6fr 1fr; gap: 32px; align-items: start; }
+@media (max-width: 860px) { .woche__raster { grid-template-columns: 1fr; } }
+.filter { display: flex; gap: 8px; margin-bottom: 16px; }
+.filter__chip { font: 500 .95rem var(--text); padding: 6px 14px; border-radius: 999px; border: 1px solid var(--linie); background: var(--kreide); color: var(--tinte); cursor: pointer; }
+.filter__chip[aria-pressed="true"] { background: var(--marine); border-color: var(--marine); color: var(--kreide); }
+
+.agenda { background: var(--kreide); border-radius: 10px; border: 1px solid var(--linie); }
+.agenda__tag { font: 700 1.15rem/1 var(--display); color: var(--marine); padding: 18px 20px 8px; }
+.agenda__tag:not(:first-child) { border-top: 1px solid var(--linie); }
+.termin { display: grid; grid-template-columns: 58px 1fr auto; gap: 14px; align-items: baseline; padding: 9px 20px; }
+.termin:last-child { padding-bottom: 18px; }
+.termin__zeit { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--grau); }
+.termin__titel { font-weight: 500; }
+.termin--spiel .termin__titel { font-weight: 600; color: var(--rot); }
+.termin__team { font-size: .85rem; color: var(--grau); white-space: nowrap; }
+.termin[hidden] { display: none; }
+
+.wochenende { background: var(--kreide); border-radius: 10px; border: 1px solid var(--linie); padding: 20px; }
+.wochenende h3 { color: var(--marine); margin-bottom: 12px; }
+.wochenende li { padding: 10px 0; border-top: 1px solid var(--grund); }
+.wochenende li:first-child { border-top: 0; padding-top: 0; }
+.we__team { font-size: .85rem; color: var(--grau); }
+.we__text { font-weight: 600; }
+.we__ort { font-size: .85rem; color: var(--rot); font-weight: 600; }
+.events { margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--marine); }
+.event { display: grid; grid-template-columns: 56px 1fr; gap: 12px; align-items: center; }
+.event__datum { background: var(--marine); color: var(--kreide); border-radius: 6px; text-align: center; padding: 6px 0; font: 700 1.25rem/1 var(--display); }
+.event__datum small { display: block; font: 500 .75rem/1.2 var(--text); color: var(--gold); }
+.event__titel { font-weight: 600; }
+.event__info { font-size: .85rem; color: var(--grau); }
+
+/* Berichte */
+.berichte { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: start; }
+@media (max-width: 860px) { .berichte { grid-template-columns: 1fr; } }
+.bericht { background: var(--kreide); border-radius: 10px; border: 1px solid var(--linie); padding: clamp(20px, 3vw, 32px); border-top: 6px solid var(--rot); }
+.bericht__meta { font-size: .9rem; color: var(--grau); margin-bottom: 8px; }
+.bericht h3 { font-size: clamp(1.6rem, 3vw, 2rem); color: var(--marine); margin-bottom: 14px; }
+.bericht p { max-width: 65ch; }
+.bericht .textlink { display: inline-block; margin-top: 16px; }
+
+.videos h3 { color: var(--marine); margin-bottom: 12px; }
+.videos ul { display: grid; gap: 12px; margin-bottom: 14px; }
+.video { display: grid; grid-template-columns: 132px 1fr; gap: 14px; align-items: center; text-decoration: none; }
+.video__bild { aspect-ratio: 16/9; border-radius: 6px; background: var(--marine) center/cover no-repeat; position: relative; }
+.video__bild::after { content: ""; position: absolute; inset: 0; margin: auto; width: 0; height: 0; border-left: 14px solid var(--kreide); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+.video__titel { font-weight: 600; line-height: 1.3; }
+.video__liga { font-size: .85rem; color: var(--grau); }
+.video:hover .video__titel { color: var(--rot); }
+
+/* Mannschaften */
+.teams { display: grid; gap: 28px; }
+.teams__herren { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 860px) { .teams__herren { grid-template-columns: 1fr; } }
+.herren a {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; align-items: center;
+  background: var(--kreide); border: 1px solid var(--linie); border-left: 6px solid var(--marine);
+  border-radius: 10px; padding: 18px 20px; text-decoration: none; height: 100%;
+}
+.herren a:hover { border-left-color: var(--rot); }
+.herren__kurz { grid-row: span 3; font: 800 2.6rem/1 var(--display); color: var(--rot); }
+.herren__name { font: 700 1.3rem/1.1 var(--display); color: var(--marine); }
+.herren__liga, .herren__trainer { font-size: .9rem; color: var(--grau); }
+.teams__rest { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; }
+@media (max-width: 860px) { .teams__rest { grid-template-columns: 1fr; } }
+.teams__rest h3 { color: var(--marine); margin-bottom: 12px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags a { display: inline-block; padding: 8px 14px; border-radius: 6px; background: var(--kreide); border: 1px solid var(--linie); text-decoration: none; font-weight: 500; }
+.tags a:hover { border-color: var(--rot); color: var(--rot); }
+.tags b { font-family: var(--display); font-weight: 700; color: var(--marine); margin-right: 4px; }
+
+/* Verein */
+.verein { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: stretch; padding-bottom: clamp(48px, 7vw, 88px); }
+@media (max-width: 860px) { .verein { grid-template-columns: 1fr; } }
+.verein__text h2 { color: var(--marine); margin-bottom: 14px; }
+.verein__text p { max-width: 60ch; margin-bottom: 20px; }
+.verein__links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.kunstrasen { background: var(--rot); color: var(--kreide); border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.kunstrasen p { color: rgba(255,255,255,.88); }
+
+/* Fuß */
+.fuss { background: var(--marine-tief); color: rgba(255,255,255,.8); }
+.fuss__innen { max-width: var(--breite); margin: 0 auto; padding: 48px var(--rand) 32px; display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+@media (max-width: 760px) { .fuss__innen { grid-template-columns: 1fr 1fr; } .fuss__marke { grid-column: 1 / -1; } }
+.fuss__marke { display: flex; gap: 16px; align-items: center; }
+.fuss__marke p { font: 600 1.15rem/1.3 var(--display); color: var(--kreide); }
+.fuss h3 { font-size: 1.1rem; color: var(--gold); margin-bottom: 10px; }
+.fuss nav a { display: block; text-decoration: none; padding: 4px 0; }
+.fuss nav a:hover { color: var(--kreide); text-decoration: underline; }
+.fuss__recht { max-width: var(--breite); margin: 0 auto; padding: 16px var(--rand) 28px; border-top: 1px solid rgba(255,255,255,.12); display: flex; gap: 20px; flex-wrap: wrap; font-size: .9rem; }
+.fuss__recht span { margin-left: auto; color: rgba(255,255,255,.5); }
+
+/* Kalender-Dialog */
+.abo { border: 0; border-radius: 12px; padding: 0; max-width: 520px; width: calc(100% - 32px); color: var(--tinte); }
+.abo::backdrop { background: rgba(18,29,53,.6); }
+.abo form { padding: 28px; display: grid; gap: 14px; }
+.abo h2 { font-size: 2rem; color: var(--marine); }
+.abo__liste { display: flex; flex-wrap: wrap; gap: 8px; }
+.abo__liste button { font: 500 .95rem var(--text); padding: 8px 14px; border-radius: 6px; border: 1px solid var(--linie); background: var(--grund); cursor: pointer; }
+.abo__liste button[aria-pressed="true"] { background: var(--marine); color: var(--kreide); border-color: var(--marine); }
+.abo__hinweis { font-size: .9rem; color: var(--grau); }
+.abo .knopf { justify-self: start; }
+
+/* Mobil-Korrekturen */
+.woche__raster > *, .berichte > *, .teams__rest > *, .verein > * { min-width: 0; }
+@media (max-width: 560px) {
+  .termin { grid-template-columns: 50px 1fr; gap: 2px 12px; padding: 8px 16px; }
+  .termin__team { grid-column: 2; font-size: .8rem; }
+  .agenda__tag { padding: 16px 16px 6px; }
+  .spiel__urteil { font-size: .75rem; padding: 2px 6px; }
+  .spiel__gegner { font-size: 1.15rem; }
+  .fuss__recht span { margin-left: 0; }
+}
+@media (max-width: 480px) {
+  .marke__name { font-size: 1.05rem; }
+  .marke img { width: 30px; }
+  .spiel { gap: 6px 12px; }
+  .spiel__team { font-size: 1.6rem; }
+}
