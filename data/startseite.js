@@ -74,5 +74,27 @@ window.SG_DATA = {
     { datum: "Sa. 3. Okt. 26", klasse: "C-Junioren", heim: "SG Johannesbr.-Binab. II", gast: "FC Velden-Eberspoint II" },
     { datum: "Sa. 3. Okt. 26", klasse: "E-Junioren", heim: "SG Johannesbr.-Binab. II", gast: "FC Eberspoint" },
     { datum: "Sa. 3. Okt. 26", klasse: "E-Junioren", heim: "ETSV 09 Landshut III", gast: "SG Johannesbr.-Binab." }
+  ],
+
+  // Service-Kacheln (ersetzen die bisherige Linkliste rechts)
+  service: [
+    { titel: "Videos", info: "830 Spielvideos", icon: "video" },
+    { titel: "Bilder", info: "Galerien", icon: "bild" },
+    { titel: "Stadionzeitung", info: "Aktuelle Ausgabe", icon: "zeitung" },
+    { titel: "Schiedsrichter", info: "Einteilung", icon: "pfeife" },
+    { titel: "Hallenplan", info: "Belegung", icon: "halle" },
+    { titel: "Kunstrasen", info: "Vermietung", icon: "platz" },
+    { titel: "SG Forum", info: "Austausch", icon: "forum" },
+    { titel: "Umfragen", info: "Mitmachen", icon: "umfrage" },
+    { titel: "Lehrmaterial", info: "Für Trainer", icon: "buch" },
+    { titel: "Hochladen", info: "Fotos und Berichte", icon: "upload" },
+    { titel: "BFV", info: "Spiele und Tabellen", icon: "ball" },
+    { titel: "Formulare", info: "Beitritt, Vorlagen", icon: "formular" }
+  ],
+
+  social: [
+    { name: "YouTube", url: "https://www.youtube.com/@JobiSG/playlists" },
+    { name: "Instagram", url: "https://www.instagram.com/sgjohannesbrunnbinabiburg/" },
+    { name: "Facebook", url: "https://www.facebook.com/SGJoBi" }
   ]
 };

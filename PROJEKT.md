@@ -6,7 +6,7 @@ Ziel: Die bestehende Seite (sg-johannesbrunn-binabiburg.de, Frameset/PHP) modern
 
 | Schritt | Inhalt | Status |
 |---|---|---|
-| 1 | Design + Startseite mit echten Inhalten | ✅ Entwurf 2 (01.10.2026) |
+| 1 | Design + Startseite mit echten Inhalten | ✅ Entwurf 3 (01.10.2026) |
 | 2 | Mannschaftsseiten (eine Vorlage für ~20 Teams, BFV-Widgets) | offen |
 | 3 | Kalender-Demo (Google-Kalender pro Team, Abo), Berichte-, Video-Seite | offen |
 | 4 | Kontakt, Service (Beitritt/Austritt, Formulare, Hallenplan, SR-Einteilung), Impressum, Mobil-Feinschliff | offen |
@@ -30,6 +30,13 @@ Lokal ansehen: `index.html` im Browser öffnen.
   - Überschriften Rot `#C00000`, Seitenhintergrund Grau `#A0A0A0`
 - Aus Entwurf 1 behalten (gefiel): Mannschafts-Kacheln SG1–3 + Junioren-Tags
 - Handy: Kalender direkt nach den Ergebnissen
+- Entwurf 3 (Entwurf 2 wirkte „zu altbacken“): modernisiert, Identität bleibt
+  - volle Monitorbreite für Flächen (Kopf, Bänder, Fuß), Inhalt max. 1400 px
+  - Menü oben statt Seitenspalte, Mannschaften als großes Aufklapp-Menü (Herren/Junioren)
+  - Ergebnisse als große Bildkarten mit Spielstand, Kalender rechts daneben (Ortsfarben als Streifen + zarte Fläche)
+  - Linkliste rechts → Service-Kacheln mit Symbolen
+  - rotes Vereinsband (Mitglied werden, Shop, Kunstrasen), dunkler Fuß
+  - Handy: Ergebnisse und Team-Kürzel wischbar, Kalender direkt danach
 
 ## Entscheidungen
 
